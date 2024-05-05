@@ -53,3 +53,54 @@ body .container {
 #filterable-cards .card img:hover {
   transform: scale(1.1);
 }
+#filterable-cards .card img {
+  cursor: pointer;
+}
+#filterable-cards .card img:hover {
+  transform: scale(1.0); /* Membesarkan gambar saat kursor di atasnya */
+  filter: brightness(1.5); /* Menambahkan efek pencahayaan */
+}
+/* Style for filter buttons */
+#filter-buttons {
+  text-align: center;
+}
+
+#filter-buttons button {
+  margin: 0 5px;
+}
+
+/* Style for image cards */
+#filterable-cards .card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#filterable-cards .card:hover {
+  transform: translateY(-5px); /* Pindahkan kartu ke atas saat hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#filterable-cards .card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#filterable-cards .card .card-body {
+  padding: 10px;
+}
+
+#filterable-cards .card .card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#filterable-cards .card .card-text {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  #filterable-cards .card {
+    width: 100%;
+  }
+}

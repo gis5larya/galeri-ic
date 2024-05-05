@@ -18,3 +18,19 @@ const filterCards = (e) => {
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
+// Select all images in the gallery
+const galleryImages = document.querySelectorAll("#filterable-cards .card img");
+
+// Function to handle click on an image
+const handleImageClick = (e) => {
+    // Define the action you want to perform when the image is clicked
+    // For example, you can open the image in a modal or redirect the user to a separate page
+    console.log("Image clicked:", e.target.src);
+    // Example: open the image in a new tab
+    window.open(e.target.src, "_blank");
+}
+
+// Add click event listener to each image
+galleryImages.forEach(image => {
+    image.addEventListener("click", handleImageClick);
+});
